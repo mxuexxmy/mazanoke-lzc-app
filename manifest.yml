@@ -1,0 +1,20 @@
+lzc-sdk-version: "0.1"
+name: Mazanoke
+package: xyz.mxue.mazanoke
+version: 0.0.1
+description: Mazanoke 是一款简单的图像压缩器和转换器，完全在浏览器中运行。无需外部上传。Mazanoke 可作为 Web
+  应用程序离线运行。可在 JPG、PNG 和 WebP 之间进行转换。
+homepage: https://github.com/civilblur/mazanoke
+author: civilblur
+application:
+  subdomain: mazanoke
+  background_task: false
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  routes:
+    - /=http://mazanoke.xyz.mxue.mazanoke.lzcapp:80/
+services:
+  mazanoke:
+    image: registry.lazycat.cloud/mxuexxmy/civilblur/mazanoke:4adf32dbca4c31e4
